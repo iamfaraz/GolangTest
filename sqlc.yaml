@@ -1,0 +1,14 @@
+version: "2"
+cloud:
+  project: '01HG6TNR5PJAN864RVZTW7BMXC'
+sql:
+  - engine: "postgresql"
+    queries: "query.sql"
+    schema: "schema.sql"
+    database:
+      managed: true
+    gen:
+      go:
+        package: "golangTest"
+        out: "golangTest"
+        sql_package: "pgx/v5"
